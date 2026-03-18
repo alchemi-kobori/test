@@ -1,0 +1,11 @@
+{
+  "name": "AI CLI Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  // コンテナ作成後にnpmで3つのCLIツールをグローバルインストールします
+  "postCreateCommand": "npm install -g @openai/codex @anthropic-ai/claude-code @google/gemini-cli"
+}
